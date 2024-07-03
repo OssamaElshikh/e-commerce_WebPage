@@ -88,6 +88,11 @@
         background-color: green;
         color: white;
       }
+      .order-success {
+        color: green;
+        font-weight: bold;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
@@ -193,6 +198,9 @@
             <div class="total-price mt-3">
               <h5>Total: $<span id="cartTotal">0.00</span></h5>
             </div>
+            <div class="order-success" id="orderSuccessMessage" style="display: none;">
+              Order placed successfully!
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn place-order-btn">Place Order</button>
@@ -284,11 +292,14 @@
         });
 
         document.querySelector('.place-order-btn').addEventListener('click', function() {
-          alert('Order placed successfully!');
+          document.getElementById('orderSuccessMessage').style.display = 'block';
+          setTimeout(() => {
+            document.getElementById('orderSuccessMessage').style.display = 'none';
+          }, 3000);
           cart.length = 0;
           updateCartCount();
           displayCartItems();
-          cartModal.hide();
+          updateCartTotal();
         });
 
         function updateCartCount() {
