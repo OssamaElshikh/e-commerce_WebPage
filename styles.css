@@ -1,0 +1,62 @@
+/* Ensure the nav-links have some right margin and increase their size */
+.nav-link.category-link {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    /* Slightly bigger text */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+/* Change color on hover */
+.nav-link.category-link:hover {
+    color: green;
+}
+
+/* Active category link */
+.nav-link.category-link.active {
+    color: green;
+}
+
+/* Ensure the nav-links have some right margin and increase their size */
+.nav-link.category-link {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    /* Slightly bigger text */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+/* Change color on hover */
+.nav-link.category-link:hover {
+    color: green;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* Add space between cards */
+}
+
+.card {
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    /* Ensure a uniform height for all images */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover ensures images fill the area without stretching */
+    display: block;
+    margin: 0 auto;
+}
